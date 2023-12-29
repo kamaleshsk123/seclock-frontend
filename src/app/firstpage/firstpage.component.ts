@@ -11,10 +11,14 @@ import { Router } from '@angular/router';
 export class FirstpageComponent implements OnInit {
   constructor(private router: Router) {}
 
+  redirectToChooseOne(): void {
+    this.router.navigate(['/chooseone']); // Adjust the route based on your actual route configuration
+  }
+
   ngOnInit(): void {
     // Use setTimeout to navigate after 2 seconds
     setTimeout(() => {
       this.router.navigate(['/chooseone']);
-    }, 2000);
+    }, 5000);
   }
 }
