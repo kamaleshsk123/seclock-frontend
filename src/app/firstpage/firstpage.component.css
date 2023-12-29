@@ -1,0 +1,20 @@
+/* styles.css */
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.flicker-animation {
+  animation: flicker 2s infinite; /* Adjusted duration for a slower continuous flicker */
+}

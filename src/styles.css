@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0; /* Remove default body margin */
+}
+
+/* Center the content vertically */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Set background color and position for top and bottom bars */
+.top,
+.bottom {
+  height: 4rem;
+  background-color: black;
+}
+
+/* Fix the top and bottom bars at their respective positions */
+.fixed {
+  position: fixed;
+  width: 100%;
+}
