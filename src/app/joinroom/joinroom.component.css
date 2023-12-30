@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Patua+One&display=swap");
+
+.logo {
+  font-family: "Bree Serif", serif;
+  font-size: 23px;
+}
+button {
+  font-family: "Patua One", serif;
+}

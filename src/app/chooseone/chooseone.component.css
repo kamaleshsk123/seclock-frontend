@@ -1,0 +1,62 @@
+/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Patua+One&display=swap");
+
+.logo {
+  font-family: "Bree Serif", serif;
+  font-size: 23px;
+}
+button {
+  font-family: "Patua One", serif;
+}
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.flicker-animation {
+  animation: flicker 2s infinite; /* Adjusted duration for a slower continuous flicker */
+}
+
+body {
+  margin: 0; /* Remove default body margin */
+}
+
+/* Center the content vertically */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Set background color and position for top and bottom bars */
+.top,
+.bottom {
+  height: 4rem;
+  background-color: black;
+}
+
+/* Fix the top and bottom bars at their respective positions */
+.fixed {
+  position: fixed;
+  width: 100%;
+}

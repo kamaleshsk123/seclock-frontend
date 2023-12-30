@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ChooseoneComponent } from '../chooseone/chooseone.component';
 
 @Component({
   selector: 'app-firstpage',
   standalone: true,
-  imports: [],
   templateUrl: './firstpage.component.html',
   styleUrl: './firstpage.component.css',
+  imports: [ChooseoneComponent],
 })
 export class FirstpageComponent implements OnInit {
   constructor(private router: Router) {}
@@ -16,9 +17,10 @@ export class FirstpageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Use setTimeout to navigate after 2 seconds
     setTimeout(() => {
       this.router.navigate(['/chooseone']);
     }, 5000);
   }
 }
+
+// Use setTimeout to navigate after 2 seconds
