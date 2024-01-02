@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -67,5 +67,10 @@ export class CreateroomComponent {
 
   hideCopyMessageOnBlur(): void {
     this.showCopyMessage = false;
+  }
+
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscape(event: KeyboardEvent): void {
+    this.goBack();
   }
 }

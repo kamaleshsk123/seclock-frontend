@@ -38,13 +38,20 @@
 
     <div class="flex flex-col items-center justify-center flex-grow">
       <h3 class="font-extrabold logo lg:text-2xl">Join the Room</h3>
-      <input
-        type="text"
-        pattern="[0-9]*"
-        inputmode="numeric"
-        placeholder="Room ID"
-        class="p-2 mt-4 font-bold border-2 border-gray-300 rounded-md"
-      />
+
+      <div class="flex shadow-sm">
+        <div
+          class="relative rounded-lg w-64 overflow-hidden before:absolute before:w-12 before:h-12 before:content[''] before:right-0 before:bg-violet-500 before:rounded-full before:blur-lg after:absolute after:-z-10 after:w-20 after:h-20 after:content[''] after:bg-rose-300 after:right-12 after:top-3 after:rounded-full after:blur-lg"
+        >
+          <input
+            inputmode="numeric"
+            placeholder="Room id"
+            pattern="[0-9]*"
+            class="relative bg-transparent ring-0 outline-none border-2 border-neutral-500 text-neutral-900 placeholder-violet-700 text-sm font-semibold rounded-lg focus:ring-violet-500 placeholder-opacity-60 focus:border-violet-500 block w-full p-2.5 checked:bg-emerald-500"
+            type="text"
+          />
+        </div>
+      </div>
     </div>
 
     <div class="fixed bottom-0 w-full h-16 bg-black bottom"></div>
