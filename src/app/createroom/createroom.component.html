@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="" />
   </head>
 
-  <body class="h-screen flex flex-col justify-between items-center">
-    <div class="h-16 bg-black top w-full fixed top-0">
+  <body class="flex flex-col items-center justify-between h-screen">
+    <div class="fixed top-0 w-full h-16 bg-black top">
       <div (click)="goBack()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,11 +36,42 @@
       </div>
     </div>
 
-    <div class="flex-grow flex flex-col justify-center items-center">
-      <h3 class="logo font-extrabold ml-[-5em] lg:text-2xl">Create the Room</h3>
+    <div class="flex flex-col items-center justify-center flex-grow">
+      <h3 class="font-extrabold logo lg:text-2xl">Create the Room</h3>
+
+      <div class="flex ml-3">
+        <input
+          type="text"
+          matInput
+          [(ngModel)]="randomValue"
+          readonly
+          inputmode="numeric"
+          placeholder="Room id"
+          class="p-2 mt-4 font-bold border-2 border-gray-300 rounded-md"
+        />
+        <div
+          class="flex content-center justify-center w-10 h-10 p-2 mt-3 ml-3 bg-black circle"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            (click)="copyToClipboard()"
+            (focus)="showCopyMessageOnFocus()"
+            (blur)="hideCopyMessageOnBlur()"
+            class="cursor-pointer"
+          >
+            <path
+              fill="white"
+              d="M19.53 8L14 2.47a.75.75 0 0 0-.53-.22H11A2.75 2.75 0 0 0 8.25 5v1.25H7A2.75 2.75 0 0 0 4.25 9v10A2.75 2.75 0 0 0 7 21.75h7A2.75 2.75 0 0 0 16.75 19v-1.25H17A2.75 2.75 0 0 0 19.75 15V8.5a.75.75 0 0 0-.22-.5m-5.28-3.19l2.94 2.94h-2.94Zm1 14.19A1.25 1.25 0 0 1 14 20.25H7A1.25 1.25 0 0 1 5.75 19V9A1.25 1.25 0 0 1 7 7.75h1.25V15A2.75 2.75 0 0 0 11 17.75h4.25ZM17 16.25h-6A1.25 1.25 0 0 1 9.75 15V5A1.25 1.25 0 0 1 11 3.75h1.75V8.5a.76.76 0 0 0 .75.75h4.75V15A1.25 1.25 0 0 1 17 16.25"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
 
-    <div class="h-16 bg-black bottom w-full fixed bottom-0"></div>
+    <div class="fixed bottom-0 w-full h-16 bg-black bottom"></div>
 
     <script src="" async defer></script>
   </body>

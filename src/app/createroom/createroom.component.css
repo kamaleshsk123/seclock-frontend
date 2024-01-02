@@ -7,3 +7,22 @@
 button {
   font-family: "Patua One", serif;
 }
+
+.copy-message {
+  color: green; /* You can adjust the color */
+  margin-top: 5px;
+}
+
+.circle {
+  align-items: center;
+  border-radius: 50%;
+}
+
+.input-container {
+  align-items: center;
+}
+
+.icon {
+  top: 50%;
+  transform: translateY(-50%);
+}
